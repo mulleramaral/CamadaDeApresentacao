@@ -1,0 +1,29 @@
+﻿@using CamadaDeApresentacao.Models;
+
+@model ICollection<Aluno>
+
+@{
+    ViewBag.Title = "Lista";
+    Layout = "~/Views/shared/k19Layout.cshtml";
+}
+
+
+<h2>Tabela de Alunos</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Email</th>
+    </tr>
+
+    @foreach (var a in @Model)
+    {
+        <tr>
+            <td>@a.Id</td>
+            <td>@a.Nome</td>
+            <td>@a.Email</td>
+        </tr>
+    }
+</table>
+
