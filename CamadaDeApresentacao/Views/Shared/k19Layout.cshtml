@@ -14,7 +14,16 @@
             <span>K19 Treinamentos</span>
         </header>
         <div id="toolbar">
-            @RenderSection("Toolbar",required: false)
+            @if(IsSectionDefined("Toolbar"))
+            {
+                @RenderSection("Toolbar", required: false)
+            }
+            else
+            {
+                <input type="button" value="Veja o seu número da sorte"
+                       onclick="location.href='/Home/index'"/>
+            }
+
         </div>
 
         <section id="main">
